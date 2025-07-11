@@ -17,7 +17,9 @@ app.use(
       "http://localhost:4173",
       "https://library-system-fe.onrender.com",
     ],
-    credentials: false,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type"],
+    optionsSuccessStatus: 200,
   })
 );
 
