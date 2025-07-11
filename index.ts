@@ -4,7 +4,10 @@ import libraryItems from "./routes/libraryItems";
 import users from "./routes/users";
 import auth from "./routes/auth";
 import cors from "cors";
+
 console.log("✅ Backend server started (CORS DEBUG ACTIVE)");
+console.log("🟢 CORS middleware applied!");
+
 const app = express();
 
 app.use(
@@ -14,7 +17,7 @@ app.use(
       "http://localhost:4173",
       "https://library-system-fe.onrender.com",
     ],
-    credentials: true,
+    credentials: false,
   })
 );
 
