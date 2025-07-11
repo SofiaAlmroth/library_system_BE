@@ -4,18 +4,20 @@ import libraryItems from "./routes/libraryItems";
 import users from "./routes/users";
 import auth from "./routes/auth";
 import cors from "cors";
-
+console.log("✅ Backend server started (CORS DEBUG ACTIVE)");
 const app = express();
 
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
-      "http://localhost:4173/",
+      "http://localhost:5174",
+      "http://localhost:4173",
       "https://library-system-fe.onrender.com",
     ],
+    credentials: true,
   })
 );
+
 app.use(express.json());
 app.use("/api/categories", categories);
 app.use("/api/libraryItems", libraryItems);
